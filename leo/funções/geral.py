@@ -21,9 +21,9 @@ def verificar_par(numero):
     else:
         return False
     
-# if verificar_par(7):
+if verificar_par(7):
         print(" é par")
-# else:
+else:
         print(" é impar")
 
 def somar_lista(*numeros):
