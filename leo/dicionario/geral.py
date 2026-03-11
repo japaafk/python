@@ -24,7 +24,7 @@ pessoa =  {"nome":"leo",
 }
 print(pessoa.items())
 
-#.items() MOSTRA AS CHAVES E VALORES
+#.items() MOSTRA AS CHAVES E VALORES(.values)
 
 
 
