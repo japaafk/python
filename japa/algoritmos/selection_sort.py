@@ -12,7 +12,7 @@ def ordenacaoSelecao(array):
     novoArray = []
     for j in range(len(array)):
         menor = buscarmenor(array)
-        novoArray.append(array.pop(menor))
+        novoArray.append(array.pop(menor)) # .pop() pega a posição pelo index
     return novoArray
 
 print(ordenacaoSelecao(lista_desordenada))
