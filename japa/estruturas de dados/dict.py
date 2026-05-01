@@ -3,8 +3,9 @@ age = int(input('Digite sua idade: '))
 weight = float(input('Seu peso: '))
 
 # dicionários idetificam elementos por nomes e não por números como as listas
-pessoas = {'nome': user_id,
-           'idade': age,
+pessoas = {
+            'nome': user_id,
+            'idade': age,
             'peso': weight,
            }
 
