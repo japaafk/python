@@ -4,6 +4,8 @@ class Canal:
         self.desc = desc # instância
         self.inscr = inscritos # instância
 
+    def __repr__(self): # é executado ao chamar uma variável dessa classe em formato de string
+        return f'<{self.nome}>'
 
     def inscrever(self, quantidade=1): # caso não seja informado a quantidade, por padrão tem valor 1
         self.inscr += quantidade
@@ -26,15 +28,19 @@ class CanalEmpresarial(Canal):
         else:
             print(f'O membro "{membro}" não está na equipe')
 
-    def time(self):
+    def time_do_canal(self):
         return self._equipe
 
 # testando as funcionalidades básicas de uma classe
 print('\nNomes dos canais:')
 meu_canal = Canal('Poneis du grau', 'esportes e computadores', 5000)
-print(meu_canal.nome)
 canal_guanabara = Canal('Curso em Video', 'paixão por ensinar', 2500000)
-print(canal_guanabara.nome)
+# print(meu_canal.nome)
+# print(canal_guanabara.nome)
+# uma outra alternativa para mostrar os nomes é dar esse tipo de print
+print(meu_canal) # saida sem o método __repr__: <__main__.Canal object at 0x000002B401D76A50>
+print(canal_guanabara) # saida sem o metódo __repr__: <__main__.Canal object at 0x000002B402034B90>
+
 
 print('\n')
 
@@ -52,24 +58,24 @@ canal_duolingo = CanalEmpresarial('Duolingo', 'curso de ingles', 450000)
 print(canal_duolingo.nome)
 
 # observando as propriedades do encapsulamento
-print(f'Membros da equipe: {canal_duolingo.time()}\n')
+print(f'Membros da equipe: {canal_duolingo.time_do_canal()}\n')
 
 print('Adição do membro: joão')
 canal_duolingo.adicionar_membro('joão')
-print(f'Membros da equipe: {canal_duolingo.time()}\n')
+print(f'Membros da equipe: {canal_duolingo.time_do_canal()}\n')
 print('Adição do membro: miguel')
 canal_duolingo.adicionar_membro('miguel')
-print(f'Membros da equipe: {canal_duolingo.time()}\n')
+print(f'Membros da equipe: {canal_duolingo.time_do_canal()}\n')
 print('Adição do membro: miguel')
 canal_duolingo.adicionar_membro('miguel')
-print(f'Membros da equipe: {canal_duolingo.time()}\n')
+print(f'Membros da equipe: {canal_duolingo.time_do_canal()}\n')
 print('Adição do membro: pedro')
 canal_duolingo.adicionar_membro('pedro')
-print(f'Membros da equipe: {canal_duolingo.time()}\n')
+print(f'Membros da equipe: {canal_duolingo.time_do_canal()}\n')
 
 print('Remoção do membro: pedro')
 canal_duolingo.remover_membro('pedro')
-print(f'Membros da equipe: {canal_duolingo.time()}\n')
+print(f'Membros da equipe: {canal_duolingo.time_do_canal()}\n')
 print('Remoção do membro: pedro')
 canal_duolingo.remover_membro('pedro')
-print(f'Membros da equipe: {canal_duolingo.time()}\n')
+print(f'Membros da equipe: {canal_duolingo.time_do_canal()}\n')
