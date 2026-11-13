@@ -1,3 +1,4 @@
+# RECURSÕES SÃO BONS INCREMENTOS PARA SUBSTITUIR LOOPS
 def contagem_regressiva(numero):
     print(numero)
     if numero < 1: # CASO BASE - IMPEDE QUE A FUNÇÃO ENTRE EM UM LOOP INFINITO
